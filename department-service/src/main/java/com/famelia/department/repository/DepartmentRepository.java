@@ -7,4 +7,6 @@ import com.famelia.department.entity.Department;
 @Repository
 public interface DepartmentRepository extends JpaRepository<Department, Long> {
 
+	Department findByDepartmentId(Long departmentId);
+
 }

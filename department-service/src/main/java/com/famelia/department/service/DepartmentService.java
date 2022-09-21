@@ -8,6 +8,8 @@ import com.famelia.department.repository.DepartmentRepository;
 
 import lombok.extern.slf4j.Slf4j;
 
+
+
 @Service
 @Slf4j
 public class DepartmentService {
@@ -16,7 +18,12 @@ public class DepartmentService {
 	private DepartmentRepository departmentRepository;
 
 	public Department saveDepartment(Department department) {
-		log.info("Inside saveDeparment method of DepartmentController");
+		log.info("Inside saveDepartment method of DepartmentService");
 		return departmentRepository.save(department);
+	}
+
+	public Department findDepartmentById(Long departmentId) {
+		log.info("Inside saveDepartment method of DepartmentService");
+		return departmentRepository.findByDepartmentId(departmentId);
 	}
 }
